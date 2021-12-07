@@ -18,6 +18,8 @@ int main(int argc, char** argv) {
 
     auto time_program_start = gfa1_parser::time_now();
 
+    std::cout << "gfa1_parser | MIT License | Copyright (c) 2021 Juri Kuronen\n\n";
+
     // Read command line arguments.
     const std::string gfa1_path(argv[1]);
     const std::string output_stem(argv[2]);
