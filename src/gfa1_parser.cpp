@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
     // Create the path directory if it doesn't exist.
     if (!gfa1_parser::directory_exists(path_directory)) {
         if (gfa1_parser::create_directory(path_directory) != 0) {
-            std::cout << "Failed to create directory \"" << path_directory << "\"." << std::endl;
+            std::cerr << "Failed to create directory \"" << path_directory << "\"." << std::endl;
             return -1;
         }
     }
