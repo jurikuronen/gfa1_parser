@@ -25,8 +25,8 @@ int main(int argc, char** argv) {
     const std::string output_stem(argv[2]);
 
     // Output file paths.
-    const std::string nodes_filename = output_stem + ".nodes";
     const std::string edges_filename = output_stem + ".edges";
+    const std::string unitigs_filename = output_stem + ".unitigs";
     const std::string fasta_filename = output_stem + ".fasta";
     const std::string counts_filename = output_stem + ".counts";
     const std::string paths_filename = output_stem + ".paths";
@@ -90,11 +90,11 @@ int main(int argc, char** argv) {
         }
     }
 
-    std::cout << "Writing " << nodes_filename << '.' << std::endl;
-    segments.write_out(nodes_filename);
-
     std::cout << "Writing " << edges_filename << '.' << std::endl;
     links.write_out(edges_filename);
+
+    std::cout << "Writing " << unitigs_filename << '.' << std::endl;
+    segments.write_out(unitigs_filename);
 
     paths.set_n_segments(segments.size());
 

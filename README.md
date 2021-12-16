@@ -15,8 +15,8 @@ This will create an executable named `gfa1_parser` inside the `bin` directory.
 ./bin/gfa1_parser cdbg.gfa1 cdbg
 ```
 takes as input a [GFA1](https://github.com/GFA-spec/GFA-spec/blob/master/GFA1.md) file called `cdbg.gfa1` and creates the following files as output:
-- `cdbg.nodes`
 - `cdbg.edges`
+- `cdbg.unitigs`
 - `cdbg.fasta`
 - `cdbg.counts`
 - `cdbg_paths/*.edges`
@@ -28,8 +28,8 @@ Please see the next section for more information.
 ## Output files
 The fasta file is to be used with [SpydrPick](https://github.com/santeripuranen/SpydrPick) and the remaining output files with [unitig_distance](https://github.com/jurikuronen/unitig_distance). 
 
-#### `output.nodes` and `output.edges`
-The nodes and edges files are cleanly and compactly remapped lists of unitigs parsed from [Segment lines](https://github.com/GFA-spec/GFA-spec/blob/master/GFA1.md#s-segment-line) and [Link lines](https://github.com/GFA-spec/GFA-spec/blob/master/GFA1.md#l-link-line).
+#### `output.edges` and `output.unitigs`
+The edges and unitigs files are cleanly and compactly remapped lists of unitigs parsed from [Segment lines](https://github.com/GFA-spec/GFA-spec/blob/master/GFA1.md#s-segment-line) and [Link lines](https://github.com/GFA-spec/GFA-spec/blob/master/GFA1.md#l-link-line).
 
 #### `output.fasta`
 The fasta file works as an input alignment file for [SpydrPick](https://github.com/santeripuranen/SpydrPick). It contains each genome reference as a fasta sequence whose sequence encodes the binary occurrence pattern of unitigs. 
